@@ -3,7 +3,23 @@ using System.Diagnostics;
 
 namespace FiniteStateMachine
 {
-    public interface IPrintable
+
+    public class FSM
+    {
+           
+        public static void Main()
+        {
+            var Game = new TrafficLight();
+            bool Playing = true;
+
+            while (Playing)
+            {
+                Game.Update();
+            }
+        }
+    }
+    
+    /*public interface IPrintable
     {
         void Print();
     }
@@ -20,17 +36,17 @@ namespace FiniteStateMachine
     
     public class FSM
     {
-        //public IPrintable printable;
+        public IPrintable printable;
 
-        //public void Test()
-        //{
-        //    printable.Print();
-        //}
+        public void Test()
+        {
+            printable.Print();
+        }
     }
     
 
   
-/*    public class IMfromthefuture:IPrintable, ITalkable, IChangeable
+    public class IMfromthefuture:IPrintable, ITalkable, IChangeable
     {
         public void Print()
         {
@@ -47,4 +63,5 @@ namespace FiniteStateMachine
             
         }
     }*/
+    
 }

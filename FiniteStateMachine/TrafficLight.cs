@@ -2,6 +2,7 @@ namespace FiniteStateMachine
 {
     public class TrafficLight : Context
     {
+        State Current = new GreenLight();
         public override void Update()
         {
             Current.Update(this);
