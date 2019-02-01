@@ -1,25 +1,30 @@
+using System.Runtime.CompilerServices;
+
 namespace FiniteStateMachine
 {
     public class TrafficLight : Context
     {
-        State Current = new GreenLight();
+        public TrafficLight(State start)
+        {
+            Current = start;
+        }
         public override void Update()
         {
             Current.Update(this);
         }
         public override void ChangeState(State s)
         {
-            OnExit();
+            Current.OnExit(this);
             Current = s;
-            OnEnter();
+            Current.OnEnter(this);
         }
         public override void OnExit()
         {
-            Current.OnExit(this);
+            
         }
         public override void OnEnter()
         {
-            Current.OnEnter(this);
+            
         }
     }
 }

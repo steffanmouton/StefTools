@@ -9,7 +9,7 @@ namespace FiniteStateMachine
            
         public static void Main()
         {
-            var Game = new TrafficLight();
+            var Game = new TrafficLight(new RedLight());
             bool Playing = true;
 
             while (Playing)

@@ -1,11 +1,10 @@
 using System;
 using System.Timers;
 
-namespace FiniteStateMachine.Properties
+namespace FiniteStateMachine
 {
     public class RedLight : State
     {
-        
         public override void OnEnter(Context cur)
         {
             Console.WriteLine("The light is now RED\n");
