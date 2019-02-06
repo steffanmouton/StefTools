@@ -6,7 +6,7 @@ namespace FSMTest
     {
         public static void Main(string[] args)
         {
-            var Game = new TrafficLight(new RedLight());
+            Context Game = new TrafficLight(new RedLight());
             bool Playing = true;
 
             while (Playing)
