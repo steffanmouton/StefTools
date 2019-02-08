@@ -6,12 +6,12 @@ namespace FSMTest
     {
         public static void Main(string[] args)
         {
-            Context Game = new TrafficLight(new RedLight());
+            Context tLight = new TrafficLight(new RedLight());
             bool Playing = true;
 
             while (Playing)
             {
-                Game.Update();
+                tLight.Update();
             }
         }
     }

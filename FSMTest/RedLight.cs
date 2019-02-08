@@ -12,7 +12,10 @@ namespace FiniteStateMachine
 
         public override void Update(Context cur)
         {
+            //condition : User presses Enter
             Console.ReadLine();
+            
+            //transition
             cur.ChangeState(new GreenLight());
         }
 
